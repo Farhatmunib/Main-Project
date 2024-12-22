@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "build": "mkdir -p dist && npm run copy-images && npm run copy-html && tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "build": "mkdir -p dist && npm run copy-images && npm run copy-html && npm run copy-js && tailwindcss -i ./src/input.css -o ./src/output.css --minify",
     "copy-images": "cpx \"images/**/*\" dist/images",
-    "copy-html": "cpx \"*.html\" dist/"
+    "copy-html": "cpx \"*.html\" dist/",
+    "copy-js": "cpx \"src/**/*.js\" dist/src/"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
