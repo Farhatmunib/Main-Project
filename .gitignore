@@ -1,0 +1,17 @@
+# Ignore node_modules directory
+node_modules/
+.vscode/
+# Ignore Tailwind CSS compiled output file (if you plan to rebuild locally)
+output.css
+
+# Ignore build tool cache folders
+dist/
+build/
+
+# Ignore local environment variables (optional)
+.env
+
+# Do not ignore the images directory
+!/images/
+
+
