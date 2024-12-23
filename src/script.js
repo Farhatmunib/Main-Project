@@ -155,3 +155,31 @@
         init();
     }
 })();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('menuToggle');
+    const drawer = document.getElementById('sideDrawer');
+    const overlay = document.getElementById('drawerOverlay');
+    const header = document.getElementById('mainHeader');
+    
+    function toggleMenu() {
+        const isOpen = drawer.classList.contains('translate-x-0');
+        
+        if (isOpen) {
+            // Close menu
+            drawer.classList.remove('translate-x-0');
+            drawer.classList.add('translate-x-full');
+            overlay.classList.add('invisible', 'opacity-0');
+            document.body.classList.remove('overflow-hidden');
+        } else {
+            // Open menu
+            drawer.classList.add('translate-x-0');
+            drawer.classList.remove('translate-x-full');
+            overlay.classList.remove('invisible', 'opacity-0');
+            document.body.classList.add('overflow-hidden');
+        }
+    }
+    
+    menuButton.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+});

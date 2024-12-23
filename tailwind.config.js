@@ -1,37 +1,23 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.js"
+    "./index.html",      // This will scan the index.html for class usage
+    "./src/**/*.{css,js}" // This will scan all CSS and JS files in src folder for Tailwind classes
   ],
-
   theme: {
-    screens: {
-      'xs': '475px',
-      'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
-      'xl': '1280px',
-      '2xl': '1536px',
-    },
     extend: {
-      animation: {
-        'slide-down': 'slideDown 0.3s ease-out',
-        // Remove fade-in animation
-      },
-      keyframes: {
-        slideDown: {
-          '0%': { transform: 'translateY(-10%)', opacity: 0 },
-          '100%': { transform: 'translateY(0)', opacity: 1 },
-        },
-        // Remove fadeIn keyframes
+      screens: {
+        'xs': '475px',    // Extra small screen
+        'sm': '640px',    // Small screen
+        'md': '768px',    // Medium screen
+        'lg': '1024px',   // Large screen
+        'xl': '1280px',   // Extra large screen
+        '2xl': '1536px',  // Double extra large screen
       },
       fontFamily: {
-        'sans': ['Inter', ...defaultTheme.fontFamily.sans],
+        poppins: ['Poppins', 'sans-serif'], // Adding locally hosted Poppins font
       },
     },
   },
   plugins: [],
-}
+};

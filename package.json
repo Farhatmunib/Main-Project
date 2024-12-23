@@ -1,15 +1,15 @@
 {
+  "name": "farhat-munib",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "copy-images": "cpx \"images/**/*\" dist/images",
-    "copy-html": "cpx \"*.html\" dist/",
-    "copy-js": "cpx \"src/**/*.js\" dist/src/",
-    "copy-css": "tailwindcss -i ./src/input.css -o ./src/output.css --minify && cpx \"src/output.css\" dist/src/"
+    "build": "npx tailwindcss -i ./src/style.css -o ./src/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.16",
-    "tailwindcss": "^3.4.17",
-    "cpx": "^1.5.0"
+    "tailwindcss": "^3.4.17"
   }
 }
