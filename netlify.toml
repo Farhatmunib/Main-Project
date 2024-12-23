@@ -1,0 +1,3 @@
+[build]
+  command = "npm run build:css" # Replace with your build command if different
+  publish = "./" # The directory to deploy
