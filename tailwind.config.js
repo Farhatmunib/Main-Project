@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./index.html",      // This will scan the index.html for class usage
-    "./dist/**/*.{css,js}" // This will scan all CSS and JS files in dist folder for Tailwind classes
+    "./src/**/*.{css,js}" // This will scan all CSS and JS files in src folder for Tailwind classes
   ],
   theme: {
     extend: {
